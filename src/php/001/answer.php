@@ -7,7 +7,7 @@ $sizeListFlipped = array_flip($sizeList);
 usort($answer, function ($a, $b) use ($sizeListFlipped) {
     if ($a['num'] != $b['num']) {
         // 数値が完全に異なる場合には最優先
-        return $a < $b ? -1 : 1;
+        return $a['num'] < $b['num'] ? -1 : 1;
     }
 
     if ($a['num'] !== $b['num']) {
